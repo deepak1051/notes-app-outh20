@@ -8,7 +8,13 @@ router.get(
   passport.authenticate('google', { scope: ['profile', 'email'] })
 );
 
-router.get('/auth/google/callback', passport.authenticate('google'));
+router.get(
+  '/auth/google/callback',
+  passport.authenticate('google'),
+  (req, res) => {
+    res.redirect('/notes');
+  }
+);
 
 router.get('/api/current_user', (req, res) => {
   res.send(req.user);
@@ -16,7 +22,7 @@ router.get('/api/current_user', (req, res) => {
 
 router.get('/api/logout', (req, res) => {
   req.logout();
-  res.send(req.user);
+  res.redirect('/notes');
 });
 
 export default router;

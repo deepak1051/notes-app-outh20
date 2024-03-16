@@ -8,6 +8,8 @@ import passport from 'passport';
 import userRoutes from './routes/userRoutes.js';
 import noteRoutes from './routes/noteRoutes.js';
 
+import './services/passport.js';
+
 import path from 'path';
 
 const app = express();
@@ -25,7 +27,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Routes
-app.use('/api/users', userRoutes);
+app.use('/', userRoutes);
 app.use('/api/notes', noteRoutes);
 
 if (process.env.NODE_ENV === 'production') {

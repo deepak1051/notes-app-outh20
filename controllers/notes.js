@@ -22,7 +22,6 @@ export const createNote = async (req, res) => {
       content,
       date,
       user_id: req.user._id,
-      name: req.user.username,
     });
 
     const newNote = await _newNote.save();
