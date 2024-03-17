@@ -22,8 +22,8 @@ export default function New() {
           },
         })
         .then((res) => res.data),
-    onSuccess: (data) => {
-      navigate('/');
+    onSuccess: () => {
+      navigate('/notes');
     },
     onError(err) {
       console.log(err);

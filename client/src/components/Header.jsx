@@ -14,7 +14,12 @@ export default function Header() {
     content = <a href="/auth/google">Login with Google</a>;
   } else {
     content = (
-      <div className="flex text-sm gap-2">
+      <div className="flex text-sm gap-2 items-center">
+        <img
+          className="h-8 w-8 rounded-full object-cover"
+          src={user.avatar}
+          alt="profile pic"
+        />
         <Link
           className="p-2 border border-blue-400 text-blue-400 rounded"
           to="/new"

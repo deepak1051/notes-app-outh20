@@ -12,7 +12,18 @@ router.get(
   '/auth/google/callback',
   passport.authenticate('google'),
   (req, res) => {
-    res.redirect('/notes');
+    const path_name =
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:5173/notes'
+        : '/notes';
+
+    console.log(path_name);
+
+    res.redirect(
+      process.env.NODE_ENV === 'development'
+        ? 'http://localhost:5173/notes'
+        : '/notes'
+    );
   }
 );
 
@@ -21,8 +32,15 @@ router.get('/api/current_user', (req, res) => {
 });
 
 router.get('/api/logout', (req, res) => {
+  const path_name =
+    process.env.NODE_ENV === 'development' ? 'http://localhost:5173/' : '/';
+
+  console.log(path_name);
+
   req.logout();
-  res.redirect('/notes');
+  res.redirect(
+    process.env.NODE_ENV === 'development' ? 'http://localhost:5173/' : '/'
+  );
 });
 
 export default router;

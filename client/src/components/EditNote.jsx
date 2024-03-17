@@ -45,7 +45,7 @@ export default function EditNote() {
         })
         .then((res) => res.data),
     onSuccess: () => {
-      navigate('/');
+      navigate('/notes');
     },
     onError(err) {
       console.log(err);
