@@ -67,7 +67,7 @@ export default function EditNote() {
       <div className="bg-white py-6 sm:py-8 lg:py-12">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <Link
-            to="/"
+            to="/notes"
             className="bg-gray-400 p-2 rounded-sm text-white font-bold ml-4"
           >
             Back

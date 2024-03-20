@@ -6,11 +6,13 @@ export default function Homepage() {
           <div className="relative mx-auto max-w-4xl grid space-y-5 sm:space-y-10">
             <div className="text-center">
               <p className="text-xs font-semibold text-gray-500 tracking-wide uppercase mb-3 dark:text-gray-200">
-                Small business solutions
+                Notes taking solutions
               </p>
               <h1 className="text-3xl text-gray-800 font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-gray-200">
-                Turn online shoppers into{' '}
-                <span className="text-blue-500">lifetime customers</span>
+                <span className="text-blue-500">
+                  If you don’t write down what you’re hearing and learning,
+                  what’s the odds you remember it?
+                </span>
               </h1>
             </div>
 
@@ -47,14 +49,14 @@ export default function Homepage() {
 
               <div className="border-t sm:border-t-0 sm:border-s border-gray-200 w-32 h-px sm:w-auto sm:h-full mx-auto sm:mx-0"></div>
 
-              <div className="pt-5 sm:pt-0 sm:ps-5">
+              {/* <div className="pt-5 sm:pt-0 sm:ps-5">
                 <div className="text-lg font-semibold text-gray-800 dark:text-gray-200">
                   Trust pilot
                 </div>
                 <div className="text-sm text-gray-500">
                   Rated best over 37k reviews
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div
